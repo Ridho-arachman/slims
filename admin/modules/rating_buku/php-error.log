@@ -1,0 +1,6 @@
+[14-Jun-2025 09:10:31 Asia/Jakarta] PHP Warning:  Undefined array key "mid" in F:\laragon\www\slims\admin\modules\rating_buku\save_rating.php on line 27
+[14-Jun-2025 09:10:31 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'rated_at' in 'field list' in F:\laragon\www\slims\admin\modules\rating_buku\save_rating.php:42
+Stack trace:
+#0 F:\laragon\www\slims\admin\modules\rating_buku\save_rating.php(42): mysqli->query('UPDATE biblio_r...')
+#1 {main}
+  thrown in F:\laragon\www\slims\admin\modules\rating_buku\save_rating.php on line 42
