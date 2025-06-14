@@ -96,6 +96,7 @@ Memberikan rekomendasi 5 buku terbaik berdasarkan rating tertinggi dari member/p
 ## 🖼 5. Screenshot Tampilan Akhir (yang Disarankan)
 
 1. Halaman detail buku (menampilkan form rating ⭐)
+   ![Nama Gambar](./1.png)
 2. Alert sukses/gagal setelah submit rating
 3. Halaman rekomendasi buku (berisi 5 buku terbaik)
 4. Statistik peminjaman bulanan
