@@ -126,4 +126,4 @@ CREATE TABLE `biblio_rating` (
 
 ---
 
-_Developed by: [Your Name / Institution]_
+_Developed by: [MUHAMMAD RIDHO ARACHMAN (14022200148) / UNIVERSITAS BINA BANGSA]_
