@@ -95,12 +95,22 @@ Memberikan rekomendasi 5 buku terbaik berdasarkan rating tertinggi dari member/p
 
 ## 🖼 5. Screenshot Tampilan Akhir (yang Disarankan)
 
-1. Halaman Beranda (menampilkan form rating ⭐ Rekomendasi buku)
-   ![Nama Gambar](./1.png)
-2. Alert sukses/gagal setelah submit rating
-3. Halaman rekomendasi buku (berisi 5 buku terbaik)
-4. Statistik peminjaman bulanan
+1. Halaman Beranda (berisi 5 buku terbaik)
+   ![Halaman Beranda](./1.png)
+2. Halaman Detail Buku
+   ![Halaman Detail Buku](./4.png)
+   ![Alert Berhasil Menambahkan Rating](./6.png)
+   ![Komentar Siswa Terhadap Buku](./5.png)
+3. Halaman Panduan Pengguna
+   ![Komentar Siswa Terhadap Buku](./2.png)
+   ![Komentar Siswa Terhadap Buku](./3.png)
+4. Halaman Beranda Admin & Statistik peminjaman bulanan
+   ![Komentar Siswa Terhadap Buku](./7.png)
+   ![Komentar Siswa Terhadap Buku](./8.png)
 5. Hasil file Excel dan PDF dari ekspor
+   ![Halaman History Peminjaman](./9.png)
+   ![pdf](./10.png)
+   ![excel](./11.png)
 
 ---
 
