@@ -21,26 +21,94 @@
    - Pastikan folder `files/`, `images/`, dan `repository/` bisa ditulis (`chmod 777` di Linux)
 6. **SLiMS Siap Digunakan:** Akses di `http://localhost/slims`
 
+### 🪟 Panduan Instalasi untuk Windows
+
+#### A. Menggunakan Laragon (Direkomendasikan)
+
+1. **Download Laragon:** [https://laragon.org/download/](https://laragon.org/download/)
+2. **Install Laragon** dengan pilihan default
+3. **Start Laragon** dan pastikan Apache & MySQL berjalan
+4. **Copy folder SLiMS** ke `C:\laragon\www\slims`
+5. **Buat database baru:**
+   - Buka phpMyAdmin: `http://localhost/phpmyadmin`
+   - Buat database baru dengan nama `slims_db`
+6. **Akses instalasi:** `http://localhost/slims/install`
+7. **Konfigurasi database:**
+   - Host: `localhost`
+   - Username: `root`
+   - Password: (kosong, default Laragon)
+   - Database: `slims_db`
+
+#### B. Menggunakan XAMPP
+
+1. **Download XAMPP:** [https://www.apachefriends.org/download.html](https://www.apachefriends.org/download.html)
+2. **Install XAMPP** dengan pilihan default
+3. **Start Apache & MySQL** dari Control Panel XAMPP
+4. **Copy folder SLiMS** ke `C:\xampp\htdocs\slims`
+5. **Buat database baru:**
+   - Buka phpMyAdmin: `http://localhost/phpmyadmin`
+   - Buat database baru dengan nama `slims_db`
+6. **Akses instalasi:** `http://localhost/slims/install`
+7. **Konfigurasi database:**
+   - Host: `localhost`
+   - Username: `root`
+   - Password: (kosong, default XAMPP)
+   - Database: `slims_db`
+
+#### C. Menggunakan WAMP
+
+1. **Download WAMP:** [https://www.wampserver.com/en/](https://www.wampserver.com/en/)
+2. **Install WAMP** dengan pilihan default
+3. **Start WAMP** dan pastikan icon berwarna hijau
+4. **Copy folder SLiMS** ke `C:\wamp64\www\slims`
+5. **Buat database baru:**
+   - Buka phpMyAdmin: `http://localhost/phpmyadmin`
+   - Buat database baru dengan nama `slims_db`
+6. **Akses instalasi:** `http://localhost/slims/install`
+7. **Konfigurasi database:**
+   - Host: `localhost`
+   - Username: `root`
+   - Password: (kosong, default WAMP)
+   - Database: `slims_db`
+
+#### D. Troubleshooting Windows
+
+**Masalah Permission:**
+
+- Pastikan folder `files/`, `images/`, dan `repository/` memiliki permission write
+- Klik kanan folder → Properties → Security → Edit → Add → Everyone → Full Control
+
+**Masalah Port:**
+
+- Jika port 80/443 terpakai, ganti port di konfigurasi web server
+- Laragon: Klik kanan → Apache → httpd.conf → cari `Listen 80` → ganti ke port lain
+
+**Masalah Database:**
+
+- Pastikan MySQL service berjalan
+- Cek koneksi database di phpMyAdmin
+- Restart web server jika diperlukan
+
 ---
 
 ## 🎨 2. Perubahan Tema & File yang Dimodifikasi
 
 ### A. Tema yang Dimodifikasi
 
-- **Lokasi Tema:** `themes/default/`
+- **Lokasi Tema:** `template/default/`
 - **File yang Diubah:**
-  - `index_template.inc.php`: Struktur layout halaman
-  - `style.css`: Modifikasi tampilan visual (warna, font, padding)
-  - Penambahan ikon Font Awesome (jika digunakan)
+  - `index_template.inc.php`: Struktur layout halaman beranda
+  - `detail_template.php`: Template halaman detail buku
+  - `assets/`: Folder untuk CSS, JS, dan gambar tema
 
 ### B. File Tambahan untuk Fitur
 
 - `admin/modules/rating_buku/save_rating.php`: Menyimpan rating dari member
-- `admin/modules/rekomendasi_buku/top_rated.php`: Menampilkan buku dengan rating tertinggi
+- `admin/modules/statistik/statistik_bulanan.php`: Menampilkan statistik peminjaman bulanan
 
 ### C. Halaman Detail Buku
 
-- Menambahkan form rating
+- Menambahkan form rating di `template/default/detail_template.php`
 - Validasi member login sebelum memberikan rating
 - AJAX untuk kirim data rating tanpa reload
 
@@ -65,9 +133,8 @@ Memberikan rekomendasi 5 buku terbaik berdasarkan rating tertinggi dari member/p
 ### File yang Digunakan
 
 - Struktur tabel `biblio_rating`
-- `top_rated.php`
-- `save_rating.php`
-- `detail_buku.php` (penempatan form rating)
+- `admin/modules/rating_buku/save_rating.php`
+- `template/default/index_template.inc.php` (untuk menampilkan rekomendasi)
 
 ---
 
@@ -75,7 +142,7 @@ Memberikan rekomendasi 5 buku terbaik berdasarkan rating tertinggi dari member/p
 
 ### A. Ekspor Peminjaman ke Excel & PDF
 
-- **Lokasi File:** `admin/modules/laporan_peminjaman/export.php`
+- **Lokasi File:** `admin/modules/reporting/` (modul laporan bawaan SLiMS)
 - **Fitur:**
   - Input tanggal mulai dan akhir
   - Ekspor ke format `.xls` dan `.pdf`
@@ -85,6 +152,7 @@ Memberikan rekomendasi 5 buku terbaik berdasarkan rating tertinggi dari member/p
 
 ### B. Statistik Bulanan
 
+- **File:** `admin/modules/statistik/statistik_bulanan.php`
 - Menampilkan statistik dalam bentuk dashboard admin
 - Data yang ditampilkan:
   - Jumlah buku dipinjam (per bulan)
