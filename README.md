@@ -165,6 +165,7 @@ Memberikan rekomendasi 5 buku terbaik berdasarkan rating tertinggi dari member/p
 
 1. Halaman Beranda (berisi 5 buku terbaik)
    ![Halaman Beranda](./1.png)
+   ![Halaman Beranda](./12.png)
 2. Halaman Detail Buku
    ![Halaman Detail Buku](./4.png)
    ![Alert Berhasil Menambahkan Rating](./6.png)
@@ -179,6 +180,9 @@ Memberikan rekomendasi 5 buku terbaik berdasarkan rating tertinggi dari member/p
    ![Halaman History Peminjaman](./9.png)
    ![pdf](./10.png)
    ![excel](./11.png)
+6. Halaman Informasi
+   ![halaman informasi](./13.png)
+   ![halaman informasi](./14.png)
 
 ---
 
